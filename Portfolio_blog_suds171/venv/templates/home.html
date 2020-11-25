@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Alex Sutherland Blog </title>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <style>
+      html,body {width: 100%; height 100%;}
+    </style>
+    </head>
+    <body style= "background: url('/static/Website pics/tim-foster-Yy5cEIus0kY-unsplash.jpg')no-repeat center center fixed;
+
+        background-size: cover; /* for IE9+, Safari 4.1+, Chrome 3.0+, Firefox 3.6+ */
+        -webkit-background-size: cover; /* for Safari 3.0 - 4.0 , Chrome 1.0 - 3.0 */
+        -moz-background-size: cover; /* optional for Firefox 3.6 */
+        -o-background-size: cover; /* for Opera 9.5 */
+        margin: 0; /* to remove the default white margin of body */
+        padding: 0; /* to remove the default white margin of body */
+        overflow: hidden;">
+
+
+  </head>
+</div>
+{% extends "youtub.html"%}
+<body>
+{% block content %}
+<!-- Jumbotron -->
+<div class="container-fluid">
+<div class="row jumbotron">
+    <div class="col-xs-12 col-sm-12 col-md-9 col-lg-9 col-xl-10">
+        <p class="lead"> Hi there! I hope you and yours are well during this troubled time! Welcome to my website/portfolio.
+          Feel free to look around and if you have any questions don't hesitate to contact me!</p>
+    </div>
+    <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3 col-xl-2">
+        <a href="#"><button type="button" class="btn btn-outline-secondary btn-lrg"> How to make a website like this </button></a>
+    </div>
+</div>
+</div>
+
+<!-- Welcoke Section -->
+<div class="container-fluid padding">
+<div class="row welcome text-center">
+    <div class="col-12">
+        <h1 class="display-4"> Career Goals</h1>
+    </div>
+    <hr>
+    <div class="col-12">
+      <p class="lead"> I am aiming for a career in the Data Science field, particularly around machine learning. I am using this website to showcase my skills and knowledge.
+        I currently have a Honors in Finance Degree from University of New Brunswick and have supplemented my learning with over 40 completed courses in DataCamp.</p>
+
+    </div>
+</div>
+</div>
+
+<body>
+  </div>
+  <hr class="my-4">
+<div class="container-fluid-padding">
+<h1>Blog<h1>
+  {% for article in articles %}
+        <p style="font-family:arial; font-size:50%; text-align:center;"> Most recent posts:
+          <article class="media content-section">
+            <div class="media-body">
+              <div class="article-metadata">
+                <a class="mr-2" href="#">{{ article.author }}</a>
+                <small class="text-muted">{{ article.date_posted }}</small>
+              </div>
+              <h2><a class="article-title" href="#">{{ article.title }}</a></h2>
+              <p class="article-content">{{ article.content }}</p>
+            </div>
+          </article>
+</div>
+
+{% endfor %}
+{% endblock content %}
+  </body>
+</body>
+
+</html>
